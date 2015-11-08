@@ -4,6 +4,15 @@
 </head>
 <body>	
 	<h1>Daniela escribe</h1>
+
+	{% for post in posts %}
+		<div>
+			<p>published: {{post.published_date}}</p>
+			<h1><a href="">{{post.title}}</a></h1>
+			<p>{{ post.text|linebreaks}}</p>
+		</div>
+	{% endfor %}
+	
 	<h2>Bienvenido</h2>
 	<h3>Esto funciona, que emoción</h3>
 	<strong>this is cool</strong>
